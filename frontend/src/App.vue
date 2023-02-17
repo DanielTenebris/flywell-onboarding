@@ -1,10 +1,20 @@
 <template>
-  <LayoutMain />
+  <component :is="layout"></component>
 </template>
 
 
 <script setup>
 import LayoutMain from "@/layouts/LayoutMain.vue";
+import {computed, ref} from "vue";
+import {useRoute} from "vue-router";
+import LayoutMobile from "@/layouts/mobile/LayoutMobile.vue";
+
+const route = useRoute();
+
+const layout = computed(() => {
+  return route.meta?.layout ?? LayoutMobile
+})
+
 </script>
 
 

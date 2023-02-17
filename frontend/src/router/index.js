@@ -1,19 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PageTestOne from "@/features/testOne/PageTestOne.vue";
 import PageTestTwo from "@/features/testTwo/PageTestTwo.vue";
+import LayoutDesktop from "@/layouts/desktop/LayoutDesktop.vue";
+import LayoutMobile from "@/layouts/mobile/LayoutMobile.vue";
 
 const routes = [
   {
     path: '/',
-    redirect: '/test1',
   },
   {
-    path: '/test1',
+    path: '/desktop',
     component: PageTestOne,
+    meta: {
+      layout: LayoutDesktop,
+    },
   },
   {
-    path: '/test2',
+    path: '/mobile',
     component: PageTestTwo,
+    meta: {
+      layout: LayoutMobile,
+    },
   },
 ]
 
