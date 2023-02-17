@@ -17,18 +17,18 @@ import {useRoute} from "vue-router";
 const items = [
   {
     title: 'Главная',
-    icon: 'bx:accessibility',
-    path: '/mobile',
+    icon: 'bx:home',
+    path: '/',
   },
   {
     title: 'План',
-    icon: 'bx:accessibility',
+    icon: 'bx:map-alt',
     path: '/roadmap',
   },
   {
     title: 'Знания',
-    icon: 'bx:accessibility',
-    path: '/knowledge',
+    icon: 'bx:brain',
+    path: '/library',
   },
 ];
 
