@@ -1,9 +1,11 @@
 <template>
   <div id="bottomNavMenu">
-    <div :class="{'item': true, 'selected': isSelected(item)}" v-for="item in items" :key="item.title">
+    <div style="flex: 1" />
+    <router-link :to="item.path" :class="{'item': true, 'selected': isSelected(item)}" v-for="item in items" :key="item.title">
       <Icon class="icon" :icon="item.icon"/>
       <div class="title">{{item.title}}</div>
-    </div>
+    </router-link>
+    <div style="flex: 1" />
   </div>
 </template>
 
@@ -49,6 +51,7 @@ const isSelected = (item) => {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 20px;
 
   .item {
     display: flex;
@@ -56,6 +59,7 @@ const isSelected = (item) => {
     justify-content: center;
     flex-direction: column;
     color: #a2a2a2;
+    flex: 4;
 
     &.selected {
       color: $color-primary;

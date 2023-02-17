@@ -25,6 +25,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #f9faff;
 }
 
 * {
@@ -42,7 +43,10 @@ a {
   text-decoration: none;
   color: inherit;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:selected
+  {
     text-decoration: underline;
   }
 }
