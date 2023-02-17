@@ -19,7 +19,7 @@ const layout = computed(() => {
 
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 html,
 body {
@@ -29,7 +29,7 @@ body {
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 h1,

@@ -14,7 +14,7 @@ import BottomNavMenu from "@/layouts/mobile/BottomNavMenu.vue";
 
 
 <style lang="scss" scoped>
-$bottomNavMenuHeight: 50px;
+$bottomNavMenuHeight: 55px;
 
 #layoutMobile {
   height: 100vh;

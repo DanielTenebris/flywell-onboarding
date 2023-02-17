@@ -1,23 +1,40 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PageTestOne from "@/features/testOne/PageTestOne.vue";
-import PageTestTwo from "@/features/testTwo/PageTestTwo.vue";
 import LayoutDesktop from "@/layouts/desktop/LayoutDesktop.vue";
 import LayoutMobile from "@/layouts/mobile/LayoutMobile.vue";
+import PageMobileHome from "@/features/mobile/home/PageMobileHome.vue";
+import PageDesktopDashboard from "@/features/desktop/home/PageDesktopDashboard.vue";
+import PageMobileRoadmap from "@/features/mobile/roadmap/PageMobileRoadmap.vue";
+import PageMobileLibrary from "@/features/mobile/library/PageMobileLibrary.vue";
 
 const routes = [
   {
     path: '/',
   },
   {
-    path: '/desktop',
-    component: PageTestOne,
+    path: '/dashboard',
+    component: PageDesktopDashboard,
     meta: {
       layout: LayoutDesktop,
     },
   },
+
   {
-    path: '/mobile',
-    component: PageTestTwo,
+    path: '/',
+    component: PageMobileHome,
+    meta: {
+      layout: LayoutMobile,
+    },
+  },
+  {
+    path: '/roadmap',
+    component: PageMobileRoadmap,
+    meta: {
+      layout: LayoutMobile,
+    },
+  },
+  {
+    path: '/library',
+    component: PageMobileLibrary,
     meta: {
       layout: LayoutMobile,
     },

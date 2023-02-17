@@ -17,18 +17,18 @@ import {useRoute} from "vue-router";
 const items = [
   {
     title: 'Главная',
-    icon: 'bx:accessibility',
-    path: '/mobile',
+    icon: 'bx:home',
+    path: '/',
   },
   {
     title: 'План',
-    icon: 'bx:accessibility',
+    icon: 'bx:map-alt',
     path: '/roadmap',
   },
   {
     title: 'Знания',
-    icon: 'bx:accessibility',
-    path: '/knowledge',
+    icon: 'bx:brain',
+    path: '/library',
   },
 ];
 
@@ -60,6 +60,7 @@ const isSelected = (item) => {
     flex-direction: column;
     color: #a2a2a2;
     flex: 4;
+    height: 100%;
 
     &.selected {
       color: $color-primary;
@@ -68,6 +69,7 @@ const isSelected = (item) => {
 
   .icon {
     font-size: 22px;
+    padding-bottom: 2px;
   }
 
   .title {
