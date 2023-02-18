@@ -18,7 +18,7 @@ const items = [
   {
     title: 'Главная',
     icon: 'bx:home',
-    path: '/',
+    path: '/home',
   },
   {
     title: 'План',

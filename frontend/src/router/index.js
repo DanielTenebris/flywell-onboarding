@@ -8,10 +8,15 @@ import PageMobileLibrary from "@/features/mobile/library/PageMobileLibrary.vue";
 import PageMobileLesson from "@/features/mobile/lesson/PageMobileLesson.vue";
 import PageMobileQuiz from "@/features/mobile/quiz/PageMobileQuiz.vue";
 import PageDesktopEmployees from "@/features/desktop/employees/PageDesktopEmployees";
+import PageAuth from "@/features/auth/PageAuth.vue";
 
 const routes = [
   {
     path: '/',
+    component: PageAuth,
+    meta: {
+      layout: PageAuth,
+    }
   },
   {
     path: '/dashboard',
@@ -29,7 +34,7 @@ const routes = [
   },
 /////////////////////////////////////////////
   {
-    path: '/',
+    path: '/home',
     component: PageMobileHome,
     meta: {
       layout: LayoutMobile,

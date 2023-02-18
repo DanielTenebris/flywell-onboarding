@@ -56,6 +56,10 @@ $borra: 4px;
   align-items: center;
   justify-content: center;
 
+  &:disabled {
+    opacity: 0.4;
+  }
+
   &.primary {
     background-color: $color-primary;
     color: white;
