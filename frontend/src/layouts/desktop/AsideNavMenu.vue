@@ -10,10 +10,12 @@
       <!--          Вероника Степанова-->
       <!--        </div>-->
       <!--      </div>-->
+
       <div class="logo">
         <img :src='require("@/layouts/desktop/logo2023_2lines 4.png")'/>
       </div>
-      <div  :class="{'for_link': true, 'selected': isSelected('/employees')}" @click="$router.push('/employees')">
+
+      <div :class="{'for_link': true, 'selected': isSelected('/employees')}" @click="$router.push('/employees')">
         <div class="img">
           <img :src='require("@/layouts/desktop/profile2user.png")'/>
         </div>
@@ -22,7 +24,7 @@
         </div>
       </div>
 
-      <div  :class="{'for_link': true, 'selected': isSelected('/dashboard')}" @click="$router.push('/dashboard')">
+      <div :class="{'for_link': true, 'selected': isSelected('/dashboard')}" @click="$router.push('/dashboard')">
         <div class="img">
           <img :src='require("@/layouts/desktop/teacher.png")'/>
         </div>
@@ -41,7 +43,6 @@
       </div>
 
       <div :class="{'for_link': true, 'selected': isSelected(3)}" @click="$router.push('#')">
-
         <div class="img">
           <img :src='require("@/layouts/desktop/note.png")'/>
         </div>
@@ -50,8 +51,7 @@
         </div>
       </div>
 
-      <div  :class="{'for_link': true, 'selected': isSelected(4)}" @click="$router.push('#')">
-
+      <div :class="{'for_link': true, 'selected': isSelected(4)}" @click="$router.push('#')">
         <div class="img">
           <img :src='require("@/layouts/desktop/messages2.png")'/>
         </div>
@@ -85,8 +85,8 @@ const items = [
 ];
 
 const route = useRoute();
-const isSelected = (item) => {
-  return route.path === item.path
+const isSelected = (path) => {
+  return route.path === path
 }
 
 </script>
@@ -98,8 +98,7 @@ const isSelected = (item) => {
 $black_color: #1C1C1C;
 $grey: #00000066;
 #asideNavMenu {
-  .item{color:red;
-  }
+
   background-color: white;
   -webkit-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
@@ -157,12 +156,15 @@ $grey: #00000066;
       align-items: center;
       padding-top: 16px;
       padding-left: 20px;
-      border-left:5px solid $color-primary opacity(0);
+      cursor: pointer;
+
+      border-left: 5px solid white;
+      &.selected {
+        border-left: 5px solid $color-primary;
+      }
 
       .link {
-
         color: $black_color;
-
         font-size: 14px;
         font-weight: 600;
 
@@ -173,9 +175,7 @@ $grey: #00000066;
         height: 24px;
         padding-right: 15px;
       }
-      &.selected {
-        border-left:5px solid $color-primary;
-      }
+
     }
 
   }
