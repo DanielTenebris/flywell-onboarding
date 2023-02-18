@@ -12,12 +12,12 @@
       <!--      </div>-->
 
       <div class="logo">
-        <img :src='require("@/layouts/desktop/logo2023_2lines 4.png")'/>
+        <img :src='require("@/layouts/desktop/logo2023_2lines 4.svg")'/>
       </div>
 
       <div :class="{'for_link': true, 'selected': isSelected('/employees')}" @click="$router.push('/employees')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/profile2user.png")'/>
+          <img :src='require("@/layouts/desktop/profile2user.svg")'/>
         </div>
         <div class="link">
           Сотрудники
@@ -26,7 +26,7 @@
 
       <div :class="{'for_link': true, 'selected': isSelected('/dashboard')}" @click="$router.push('/dashboard')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/teacher.png")'/>
+          <img :src='require("@/layouts/desktop/teacher.svg")'/>
         </div>
         <div class="link">
           Задания
@@ -35,7 +35,7 @@
 
       <div :class="{'for_link': true, 'selected': isSelected(2)}" @click="$router.push('#')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/Vector.png")'/>
+          <img :src='require("@/layouts/desktop/Vector.svg")'/>
         </div>
         <div class="link">
           Роадмапы
@@ -44,7 +44,7 @@
 
       <div :class="{'for_link': true, 'selected': isSelected(3)}" @click="$router.push('#')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/note.png")'/>
+          <img :src='require("@/layouts/desktop/note.svg")'/>
         </div>
         <div class="link">
           Документы
@@ -53,7 +53,7 @@
 
       <div :class="{'for_link': true, 'selected': isSelected(4)}" @click="$router.push('#')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/messages2.png")'/>
+          <img :src='require("@/layouts/desktop/messages2.svg")'/>
         </div>
         <div class="link">
           Уведомления
