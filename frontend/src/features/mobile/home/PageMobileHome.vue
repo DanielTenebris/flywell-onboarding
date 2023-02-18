@@ -58,8 +58,48 @@
         <hr>
       </div>
 
-      <div class="dobro">
-        <img :src='require("@/features/mobile/home/mask.png")'/>
+      <div
+          class="slide"
+
+
+          :style="{'opacity': slide.status === 'lock' ? '0.5' : '1'}"
+      >
+        <div class="title">
+          {{slide.title}}
+        </div>
+
+        <div class="desc">
+          {{slide.desc}}
+        </div>
+
+        <div class="est">
+          <div class="inner">
+            <Icon class="icon" icon="bx:alarm" />
+            <div>{{slide.est}}</div>
+          </div>
+          <div style="flex: 1"/>
+        </div>
+
+        <div style="flex: 1" />
+
+        <div :class="['status', slide.status]">
+          <template v-if="slide.status === 'done'">
+            <Icon class="icon" icon="bx:check" />
+            <div class="text">Пройдено!</div>
+          </template>
+
+          <template v-if="slide.status === 'wip'">
+            <button class="appButton lime btnGo" @click="$router.push('/lesson/1')">
+              <span class="text">Изучить</span>
+              <Icon class="icon" icon="bx:chevron-right" />
+            </button>
+          </template>
+
+          <template v-if="slide.status === 'lock'">
+            <Icon class="icon" icon="bx:lock" />
+            <div class="text">Заблокирован</div>
+          </template>
+        </div>
       </div>
     </div>
   </div>
@@ -77,6 +117,12 @@ const storis = [
   "8 марта",
   "23 февраля"
 ]
+const slide=  {
+  title: 'Структура компании',
+  desc: 'Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют определения и уточнения существенных финансовых и административных условий.',
+  est: '13 минут',
+  status: 'wip',
+};
 </script>
 
 
@@ -95,6 +141,10 @@ $white_color: #F6F2FC;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-top: 10px;
+    }
+    .logo{
+      color:$color-purple;
     }
   }
 
@@ -185,14 +235,102 @@ $white_color: #F6F2FC;
       padding-top: 23px;
       padding-bottom: 42px;
     }
-    .dobro{
-      height: 220px;
-      width: 100%;
-      background-color: $white_color;
+
+    .slide {
+      height: 330px;
+      //width: 100%;
+      background-color: white;
       border-radius: 13px;
+      border: 1px solid $color-grey;
 
+      //-webkit-box-shadow: 0px 0px 19px 0px rgba(34, 60, 80, 0.2);
+      //-moz-box-shadow: 0px 0px 19px 0px rgba(34, 60, 80, 0.2);
+      //box-shadow: 0px 0px 19px 0px rgba(34, 60, 80, 0.2);
+
+      background-image: url("@/features/mobile/roadmap/bg.png");
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: 220px;
+
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      justify-content: start;
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.0em;
+      }
+
+      .desc {
+        padding-top: 6px;
+        opacity: 0.7;
+        font-size: 15px;
+      }
+
+      .est {
+        display: flex;
+
+        .inner {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          margin-top: 12px;
+          padding: 4px 8px;
+          font-weight: 500;
+          color: white;
+          font-size: 12px;
+          background-color: $color-purple;
+          border-radius: $borra;
+
+          .icon {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .status {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+
+        &.done {
+          color: $color-green;
+        }
+
+        &.wip {
+          color: $color-orange;
+        }
+
+        &.lock {
+          color: #6b6b6b;
+        }
+
+        .icon {
+          font-size: 14px;
+        }
+
+        .text {
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      .btnGo {
+
+        .text {
+          padding-left: 6px;
+        }
+
+        .icon {
+          font-size: 22px;
+          margin-left: 2px;
+        }
+      }
     }
-
 
   }
 }
