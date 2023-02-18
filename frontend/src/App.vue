@@ -51,4 +51,8 @@ a {
     text-decoration: underline;
   }
 }
+
+b {
+  font-weight: 700;
+}
 </style>

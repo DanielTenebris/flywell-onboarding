@@ -1,1 +1,57 @@
-$color-primary: #0051ff;
+$color-purple: #9362DF;
+$color-lime: #DAEF14;
+$color-orange: #FD651A;
+$color-blue: #6CE3FD;
+
+$color-primary: $color-purple;
+$color-grey: #efefef;
+
+
+
+
+$borra: 4px;
+
+._mp {
+  padding: 10px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.appTag {
+  border-radius: $borra;
+  //border: 1px solid $color-primary;
+  color: #000;
+  background-color: $color-blue;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 6px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.appButton {
+  outline: none;
+  border: none;
+  padding: 10px 12px;
+  border-radius: $borra;
+  font-weight: 500;
+
+  &.primary {
+    background-color: $color-primary;
+    color: white;
+  }
+}
