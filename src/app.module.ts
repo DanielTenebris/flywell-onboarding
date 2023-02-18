@@ -27,6 +27,7 @@ import { QuizModule } from './quiz/quiz.module';
     RoadmapModule,
     MinioClientModule,
     QuizModule,
+    UploaderModule,
   ],
 })
 export class AppModule {}

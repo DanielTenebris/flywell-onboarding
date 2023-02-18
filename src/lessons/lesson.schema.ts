@@ -10,6 +10,9 @@ export class Lesson {
   file: string;
 
   @Prop()
+  title: string;
+
+  @Prop()
   tests: Test[];
 }
 

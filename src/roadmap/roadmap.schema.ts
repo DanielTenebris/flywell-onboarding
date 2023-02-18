@@ -8,6 +8,9 @@ export type RoadmapDocument = Roadmap & Document;
 export class Roadmap {
   @Prop({ type: [LessonSchema] })
   lessons: Lesson[];
+
+  @Prop()
+  title: string;
 }
 
 export const RoadmapSchema = SchemaFactory.createForClass(Roadmap);
