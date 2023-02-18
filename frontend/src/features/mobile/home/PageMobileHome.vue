@@ -67,12 +67,12 @@
       </div>
 
       <div class="storis">
-        <div class="store" v-for="stori in storis" :key="i">
+        <div class="store" v-for="stori in storis">
           <div class="crug">
-            <img :src='require("@/features/mobile/home/stori1.png")'/>
+            <img class="img_banner" :src='stori.img'/>
           </div>
           <div class="vnizu">
-            {{ stori }}
+            {{ stori.text }}
           </div>
         </div>
       </div>
@@ -148,11 +148,18 @@ import {Icon} from "@iconify/vue/dist/iconify";
 import {ref} from "vue";
 
 const storis = [
-  'Последние новости',
-  "Доброе утро!",
-  "Событие",
-  "8 марта",
-  "23 февраля"
+  {
+    img:require("@/features/mobile/home/stori1.png"),
+  text:'Последние новости'},
+  { img:require("@/features/mobile/home/stori2.png"),
+    text:"Доброе утро!"},
+  { img:require("@/features/mobile/home/stori3.png"),
+    text:"Событие"},
+  { img:require("@/features/mobile/home/stori4.png"),
+    text:"8 марта"},
+  { img:require("@/features/mobile/home/stori5.png"),
+    text:"23 февраля"},
+
 ]
 const slide = {
   title: 'Структура компании',
@@ -258,11 +265,16 @@ $white_color: #F6F2FC;
         padding-right: 14px;
 
         .crug {
-          height: 54px;
-          width: 54px;
-          border-radius: 30px;
 
-          border: solid 4px rgba(189, 189, 189, 0.3);
+          .img_banner {
+
+            object-fit: cover;
+            height: 54px;
+            width: 54px;
+            border-radius: 30px;
+
+            border: solid 4px rgba(189, 189, 189, 0.3);
+          }
         }
 
         .vnizu {
