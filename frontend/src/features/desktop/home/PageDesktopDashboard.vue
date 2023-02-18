@@ -1,11 +1,12 @@
 <template>
   <div id="pageDesktopDashboard">
-    pageDesktopDashboard
+    <UserComponent />
   </div>
 </template>
 
 
 <script setup>
+import UserComponent from "@/features/desktop/userComponent/UserComponent.vue";
 </script>
 
 
