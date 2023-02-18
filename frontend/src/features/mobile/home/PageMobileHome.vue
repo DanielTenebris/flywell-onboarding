@@ -403,7 +403,7 @@ $white_color: #F6F2FC;
           object-fit: cover;
           border-radius: 5px;
           height: 100px;
-          width: 120px;
+          width: 170px;
           padding-right: 14px;
         }
       }
