@@ -2,6 +2,7 @@ import {getRandomInt} from "@/features/repo/utils.js";
 import {faker} from "@faker-js/faker";
 
 const data = []
+<<<<<<< HEAD
 // for (let i = 0; i < 10 + getRandomInt(20); i++) {
 //   data.push({
 //     questions: [
@@ -15,6 +16,11 @@ const data = []
 // }
 data.push({
     title:"Первичный тест на знание html",
+=======
+for (let i = 0; i < 10 + getRandomInt(20); i++) {
+  data.push({
+    title: faker.lorem.words(2),
+>>>>>>> 1772524 (Новый урок)
     questions: [
         {
             question: 'Какой элемент в html отвечает за загаловок?',
