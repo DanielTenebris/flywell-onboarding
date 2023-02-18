@@ -1,6 +1,6 @@
 <template>
-  <div class="_dp" id="employeeComponent">
-    <h1>Сотрудники</h1>
+  <div class="_dp" id="pageMobileRoadmaps">
+    <h1>Роадмап обучения</h1>
   </div>
 </template>
 
@@ -12,10 +12,7 @@
 <style lang="scss" scoped>
 @import "@/styles.scss";
 
-#employeeComponent {
-
-
-
+#pageMobileRoadmaps {
 
 }
 </style>

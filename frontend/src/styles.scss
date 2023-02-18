@@ -31,6 +31,15 @@ $borra: 4px;
   }
 }
 
+._dp {
+  padding: 12px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
 .appTag {
   border-radius: $borra;
   //border: 1px solid $color-primary;

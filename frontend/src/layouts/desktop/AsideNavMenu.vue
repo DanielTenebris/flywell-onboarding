@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected(2)}" @click="$router.push('#')">
+      <div :class="{'for_link': true, 'selected': isSelected('/roadmaps')}" @click="$router.push('/roadmaps')">
         <div class="img">
           <img :src='require("@/layouts/desktop/Vector.svg")'/>
         </div>

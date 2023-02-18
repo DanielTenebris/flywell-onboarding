@@ -9,6 +9,7 @@ import PageMobileLesson from "@/features/mobile/lesson/PageMobileLesson.vue";
 import PageMobileQuiz from "@/features/mobile/quiz/PageMobileQuiz.vue";
 import PageDesktopEmployees from "@/features/desktop/employees/PageDesktopEmployees";
 import PageAuth from "@/features/auth/PageAuth.vue";
+import PageDesktopRoadmaps from "@/features/desktop/roadmaps/PageDesktopRoadmaps.vue";
 
 const routes = [
   {
@@ -28,6 +29,13 @@ const routes = [
   {
     path: '/employees',
     component: PageDesktopEmployees,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+  {
+    path: '/roadmaps',
+    component: PageDesktopRoadmaps,
     meta: {
       layout: LayoutDesktop,
     },
