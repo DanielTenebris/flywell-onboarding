@@ -39,6 +39,13 @@ $borra: 4px;
     font-weight: 700;
     margin-bottom: 12px;
   }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
 }
 
 .appTag {
@@ -79,4 +86,12 @@ $borra: 4px;
     background-color: $color-lime;
     color: black;
   }
+}
+
+.appInput {
+  outline: none;
+  border-radius: $borra;
+  border: 1px solid #c5c5c5;
+  font-size: 15px;
+  padding: 6px 8px;
 }

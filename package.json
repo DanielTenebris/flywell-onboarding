@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "swiper": "^9.0.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }

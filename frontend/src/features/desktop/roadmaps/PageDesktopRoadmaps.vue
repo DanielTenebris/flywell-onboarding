@@ -4,7 +4,7 @@
       Роадмап обучения
     </h1>
 
-    <button class="appButton primary btnNew">Создать новый</button>
+    <button class="appButton primary btnNew" @click="$router.push('/roadmaps/new')">Создать новый</button>
 
     <div class="roadmaps">
       <RoadmapInline v-for="i in 5" class="roadmap" />
