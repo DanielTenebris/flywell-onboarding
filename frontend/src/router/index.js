@@ -27,6 +27,7 @@ const routes = [
       layout: LayoutDesktop,
     },
   },
+
   {
     path: '/employees',
     component: PageDesktopEmployees,
@@ -34,6 +35,14 @@ const routes = [
       layout: LayoutDesktop,
     },
   },
+  {
+    path: '/employees/new',
+    component: PageDesktopEmployees,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+
   {
     path: '/roadmaps',
     component: PageDesktopRoadmaps,
@@ -43,6 +52,66 @@ const routes = [
   },
   {
     path: '/roadmaps/new',
+    component: PageDesktopNewRoadmap,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+
+  {
+    path: '/lessons',
+    component: PageDesktopRoadmaps,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+  {
+    path: '/lessons/new',
+    component: PageDesktopNewRoadmap,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+
+  {
+    path: '/materials',
+    component: PageDesktopRoadmaps,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+  {
+    path: '/materials/new',
+    component: PageDesktopNewRoadmap,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+
+  {
+    path: '/tests',
+    component: PageDesktopRoadmaps,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+  {
+    path: '/tests/new',
+    component: PageDesktopNewRoadmap,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+
+  {
+    path: '/notifications',
+    component: PageDesktopRoadmaps,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
+  {
+    path: '/notifications/new',
     component: PageDesktopNewRoadmap,
     meta: {
       layout: LayoutDesktop,

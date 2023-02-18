@@ -24,15 +24,6 @@
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected('/dashboard')}" @click="$router.push('/dashboard')">
-        <div class="img">
-          <img :src='require("@/layouts/desktop/teacher.svg")'/>
-        </div>
-        <div class="link">
-          Задания
-        </div>
-      </div>
-
       <div :class="{'for_link': true, 'selected': isSelected('/roadmaps')}" @click="$router.push('/roadmaps')">
         <div class="img">
           <img :src='require("@/layouts/desktop/Vector.svg")'/>
@@ -42,16 +33,34 @@
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected(3)}" @click="$router.push('#')">
+      <div :class="{'for_link': true, 'selected': isSelected('/lessons')}" @click="$router.push('/lessons')">
+        <div class="img">
+          <img :src='require("@/layouts/desktop/teacher.svg")'/>
+        </div>
+        <div class="link">
+          Задания
+        </div>
+      </div>
+
+      <div :class="{'for_link': true, 'selected': isSelected('/materials')}" @click="$router.push('/materials')">
         <div class="img">
           <img :src='require("@/layouts/desktop/note.svg")'/>
         </div>
         <div class="link">
-          Документы
+          Материалы
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected(4)}" @click="$router.push('#')">
+      <div :class="{'for_link': true, 'selected': isSelected('/tests')}" @click="$router.push('/tests')">
+        <div class="img">
+          <img :src='require("@/layouts/desktop/note.svg")'/>
+        </div>
+        <div class="link">
+          Тесты
+        </div>
+      </div>
+
+      <div :class="{'for_link': true, 'selected': isSelected('/notifications')}" @click="$router.push('/notifications')">
         <div class="img">
           <img :src='require("@/layouts/desktop/messages2.svg")'/>
         </div>
