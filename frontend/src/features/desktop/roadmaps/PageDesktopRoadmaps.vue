@@ -7,7 +7,7 @@
     <button class="appButton primary btnNew" @click="$router.push('/roadmaps/new')">Создать новый</button>
 
     <div class="roadmaps">
-      <RoadmapInline v-for="i in 5" class="roadmap" />
+      <RoadmapInline v-for="r in roadmaps" :roadmap="r" class="roadmap" />
     </div>
   </div>
 </template>
@@ -15,6 +15,9 @@
 
 <script setup>
 import RoadmapInline from "@/features/desktop/roadmaps/RoadmapInline.vue";
+import {repoRoadmap} from "@/features/repo/repoRoadmap.js";
+
+const roadmaps = repoRoadmap().getAll();
 </script>
 
 

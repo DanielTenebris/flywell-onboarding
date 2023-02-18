@@ -17,6 +17,10 @@ export const repoMaterial = () => {
   return {
     getAll: () => {
       return data;
+    },
+
+    save: (obj) => {
+      data.push(obj);
     }
   }
 }

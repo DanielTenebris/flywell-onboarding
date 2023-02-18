@@ -18,6 +18,10 @@ export const repoTest = () => {
   return {
     getAll: () => {
       return data
+    },
+
+    save: (obj) => {
+      data.push(obj);
     }
   }
 }

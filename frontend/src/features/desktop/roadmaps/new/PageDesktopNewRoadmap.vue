@@ -4,7 +4,7 @@
 
 
     <h2 style="margin-top: 10px !important;">Придумайте имя курса обучения:</h2>
-    <input class="appInput" type="text" placeholder="Название роадмапа"/>
+    <input v-model="title" class="appInput" type="text" placeholder="Название роадмапа"/>
 
 
     <h2>Роадмап будет содержать такие задания:</h2>
@@ -36,8 +36,9 @@ import {ref} from "vue";
 import {repoRoadmap} from "../../../repo/repoRoadmap.js";
 import {repoMaterial} from "@/features/repo/repoMaterial.js";
 import {repoLesson} from "@/features/repo/repoLesson.js";
+import {useRouter} from "vue-router";
 
-const x = repoRoadmap().getAll();
+const title = ref('');
 
 const selectedLessons = ref([]);
 
@@ -53,8 +54,13 @@ const remove = (i) => {
   });
 }
 
+const router = useRouter();
 const save = () => {
-
+  repoRoadmap().save({
+    title: title,
+    lessons: selectedLessons.value,
+  })
+  router.push('/roadmaps');
 }
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div id="roadmapInline">
-    <div class="title">Инженер 1 разряда</div>
+    <div class="title">{{props.roadmap.title}}</div>
     <div class="bottom">
-      <div>12 заданий</div>
+      <div>{{props.roadmap.lessons.length}} заданий</div>
       <div>•</div>
       <div>3 чел проходят сейчас</div>
       <div>•</div>
@@ -13,6 +13,7 @@
 
 
 <script setup>
+const props = defineProps(['roadmap']);
 </script>
 
 
