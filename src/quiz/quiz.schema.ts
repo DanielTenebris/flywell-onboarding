@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type TestDocument = Test & Document;
+export type QuizDocument = Quiz & Document;
 
 @Schema()
-export class Test {
+export class Quiz {
   @Prop({ required: true })
   title: string;
 
@@ -15,4 +15,4 @@ export class Test {
   rightOption: number;
 }
 
-export const TestSchema = SchemaFactory.createForClass(Test);
+export const QuizSchema = SchemaFactory.createForClass(Quiz);
