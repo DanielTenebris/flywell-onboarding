@@ -1,5 +1,5 @@
 <template>
-  <div class="_dp" id="pageMobileRoadmaps">
+  <div class="_dp" id="pageDesktopRoadmaps">
     <h1>
       Роадмап обучения
     </h1>
@@ -24,7 +24,7 @@ const roadmaps = repoRoadmap().getAll();
 <style lang="scss" scoped>
 @import "@/styles.scss";
 
-#pageMobileRoadmaps {
+#pageDesktopRoadmaps {
   .btnNew {
     margin-bottom: 24px;
   }

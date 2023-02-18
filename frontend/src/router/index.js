@@ -13,6 +13,8 @@ import PageDesktopRoadmaps from "@/features/desktop/roadmaps/PageDesktopRoadmaps
 import PageDesktopLessons from "@/features/desktop/lessons/PageDesktopLessons.vue";
 import PageDesktopMaterials from "@/features/desktop/materials/PageDesktopMaterials.vue";
 import PageDesktopNewRoadmap from "@/features/desktop/roadmaps/new/PageDesktopNewRoadmap.vue";
+import PageDesktopLessons from "@/features/desktop/lessons/PageDesktopLessons.vue";
+import PageDesktopNewLesson from "@/features/desktop/lessons/new/PageDesktopNewLesson.vue";
 
 const routes = [
   {
@@ -69,7 +71,7 @@ const routes = [
   },
   {
     path: '/lessons/new',
-    component: PageDesktopNewRoadmap,
+    component: PageDesktopNewLesson,
     meta: {
       layout: LayoutDesktop,
     },
