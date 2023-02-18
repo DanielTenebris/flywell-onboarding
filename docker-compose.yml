@@ -17,5 +17,20 @@ services:
       MONGO_INITDB_DATABASE: api
     volumes:
       - data-volume:/data/db
+  minio:
+    image: minio:latest
+    volumes:
+      - ./s3/data1-1:/data1
+    ports:
+      - '9001:9000'
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server http://minio{1...4}/data{1...2}
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+      interval: 30s
+      timeout: 20s
+      retries: 3
 volumes:
   data-volume:

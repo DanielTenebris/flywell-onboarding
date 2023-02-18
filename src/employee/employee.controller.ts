@@ -7,10 +7,10 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { Employee } from './employee.model';
+import { Employee } from './employee.schema';
 import { EmployeeService } from './employee.service';
 
-@Controller('employees')
+@Controller('employee')
 export class EmployeeController {
   constructor(private readonly employeeService: EmployeeService) {}
 
