@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
 <form method="POST">
     <label>
-        <input name="search" type="search">
+        <input name="search" >
     </label>
     <button type="submit" >Поиск</button>
 </form>
 <ul>
     {% for i in data %}
-        <li><a href="{{ i }}">{{ i }}</a></li>
+        <li>{{ i }}</li>
     {% endfor %}
 </ul>
 </body>
