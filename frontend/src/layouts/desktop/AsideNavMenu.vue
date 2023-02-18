@@ -100,13 +100,16 @@ $grey: #00000066;
 #asideNavMenu {
 
   background-color: white;
-  -webkit-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
+  //-webkit-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
+  //-moz-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
+  //box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
 
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-right-style:  solid ;
+  border-right-color: rgba(157,165,167,0.45);
+  border-right-width:1px;
 
   .top {
     display: flex;

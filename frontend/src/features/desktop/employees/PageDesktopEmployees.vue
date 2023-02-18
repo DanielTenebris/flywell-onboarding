@@ -1,6 +1,8 @@
 <template>
   <div id="employeeComponent">
-    employees
+    <div class="poiskovik">
+
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,11 @@
 <style lang="scss" scoped>
 @import "@/styles.scss";
 
+$white_color: #FFFFFF;
 #employeeComponent {
-
+  .poiskovik {
+    height: 106px;
+    background-color: $white_color;
+  }
 }
 </style>
