@@ -1,6 +1,6 @@
 <template>
   <div id="pageMobileHome">
-    pageMobileHome
+    pageMobileHome1
   </div>
 </template>
 
