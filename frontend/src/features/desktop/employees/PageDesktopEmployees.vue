@@ -50,6 +50,13 @@
             <div class="title">
               Сотрудники
             </div>
+            <div class="button">
+              Добавить сотрудника
+            </div>
+
+          </div>
+          <div class="head">
+
           </div>
         </div>
       </div>
