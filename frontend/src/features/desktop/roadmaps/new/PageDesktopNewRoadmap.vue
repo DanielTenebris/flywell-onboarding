@@ -2,12 +2,6 @@
   <div class="_dp" id="pageDesktopNewRoadmap">
     <h1>Новый роадмап обучения</h1>
 
-    <pre>
-      {{
-          JSON.stringify(repoRoadmap().getAll()[0])
-      }}
-    </pre>
-
     <h2 style="margin-top: 10px !important;">Придумайте имя курса обучения:</h2>
     <input class="appInput" type="text" placeholder="Название роадмапа"/>
 
@@ -35,6 +29,9 @@
 <script setup>
 import {ref} from "vue";
 import {repoRoadmap} from "../../../repo/repoRoadmap.js";
+import {repoMaterial} from "@/features/repo/repoMaterial.js";
+
+const x = repoRoadmap().getAll();
 
 const selectedLessons = ref([]);
 
