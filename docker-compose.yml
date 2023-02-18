@@ -1,6 +1,8 @@
 version: "3"
 services:
   api:
+    networks:
+        flywell-onboarding:
     build: .
     ports:
       - "3000:3000"
@@ -9,6 +11,8 @@ services:
     links:
       - mongo
   mongo:
+    networks:
+        flywell-onboarding:
     image: mongo:latest
     container_name: mongo
     ports:
@@ -17,20 +21,25 @@ services:
       MONGO_INITDB_DATABASE: api
     volumes:
       - data-volume:/data/db
-  minio:
-    image: minio:latest
-    volumes:
-      - ./s3/data1-1:/data1
+
+  minio:  
+    networks:
+       flywell-onboarding:
+    image: minio/minio
+    container_name: minio
     ports:
-      - '9001:9000'
+      - "9000:9000"
+      - "9001:9001"
     environment:
-      MINIO_ACCESS_KEY: minio
-      MINIO_SECRET_KEY: minio123
-    command: server http://minio{1...4}/data{1...2}
-    healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
-      interval: 30s
-      timeout: 20s
-      retries: 3
+     - MINIO_ROOT_USER
+     - MINIO_ROOT_PASSWORD
+    volumes:
+      - minio_storage:/data
+    command: server --console-address ":9001" /data
+
 volumes:
   data-volume:
+  minio_storage: {}
+
+networks:
+  flywell-onboarding:

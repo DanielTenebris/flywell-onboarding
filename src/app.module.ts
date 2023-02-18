@@ -1,13 +1,17 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose/dist/mongoose.module';
 import { EmployeeModule } from './employee/employee.module';
-import { ConfigModule } from './config/config.module';
 import { MongooseModuleAsyncOptions } from '@nestjs/mongoose';
-import { ConfigService } from './config/config.service';
 import { RoadmapModule } from './roadmap/roadmap.module';
+import { MinioClientModule } from './minio/minio.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env',
+    }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -19,8 +23,8 @@ import { RoadmapModule } from './roadmap/roadmap.module';
         } as MongooseModuleAsyncOptions),
     }),
     EmployeeModule,
-    ConfigModule,
     RoadmapModule,
+    MinioClientModule,
   ],
 })
 export class AppModule {}
