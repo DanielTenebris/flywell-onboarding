@@ -19,6 +19,13 @@ const routes = [
       layout: LayoutDesktop,
     },
   },
+  {
+    path: '/employees',
+    component: PageDesktopDashboard,
+    meta: {
+      layout: LayoutDesktop,
+    },
+  },
 /////////////////////////////////////////////
   {
     path: '/',

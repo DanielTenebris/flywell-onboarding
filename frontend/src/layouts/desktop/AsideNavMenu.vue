@@ -1,20 +1,68 @@
 <template>
   <div id="asideNavMenu">
     <div class="top">
-      <img class="img" src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="" />
-      <div class="text"></div>
-    </div>
 
-    <div class="center">
-      <div class="items">
-        <router-link :to="item.path" :class="{'item': true, 'selected': isSelected(item)}" v-for="item in items">
-          <Icon class="icon" :icon="item.icon" />
-          <div class="text">{{item.title}}</div>
-        </router-link>
+      <!--      <div class="profile">-->
+      <!--        <div class="photo">-->
+
+      <!--        </div>-->
+      <!--        <div class="name">-->
+      <!--          Вероника Степанова-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <div class="logo">
+        <img :src='require("@/layouts/desktop/logo2023_2lines 4.png")'/>
       </div>
+      <div  :class="{'for_link': true, 'selected': isSelected('/employees')}" @click="$router.push('/employees')">
+        <div class="img">
+          <img :src='require("@/layouts/desktop/profile2user.png")'/>
+        </div>
+        <div class="link">
+          Сотрудники
+        </div>
+      </div>
+
+      <div  :class="{'for_link': true, 'selected': isSelected('/dashboard')}" @click="$router.push('/dashboard')">
+        <div class="img">
+          <img :src='require("@/layouts/desktop/teacher.png")'/>
+        </div>
+        <div class="link">
+          Задания
+        </div>
+      </div>
+
+      <div :class="{'for_link': true, 'selected': isSelected(2)}" @click="$router.push('#')">
+        <div class="img">
+          <img :src='require("@/layouts/desktop/Vector.png")'/>
+        </div>
+        <div class="link">
+          Роадмапы
+        </div>
+      </div>
+
+      <div :class="{'for_link': true, 'selected': isSelected(3)}" @click="$router.push('#')">
+
+        <div class="img">
+          <img :src='require("@/layouts/desktop/note.png")'/>
+        </div>
+        <div class="link">
+          Документы
+        </div>
+      </div>
+
+      <div  :class="{'for_link': true, 'selected': isSelected(4)}" @click="$router.push('#')">
+
+        <div class="img">
+          <img :src='require("@/layouts/desktop/messages2.png")'/>
+        </div>
+        <div class="link">
+          Уведомления
+        </div>
+      </div>
+
     </div>
 
-    <div class="bottom">bottom</div>
+
   </div>
 </template>
 
@@ -40,13 +88,18 @@ const route = useRoute();
 const isSelected = (item) => {
   return route.path === item.path
 }
+
 </script>
 
 
 <style lang="scss" scoped>
 @import "@/styles.scss";
 
+$black_color: #1C1C1C;
+$grey: #00000066;
 #asideNavMenu {
+  .item{color:red;
+  }
   background-color: white;
   -webkit-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 4px 69px 2px rgba(34, 60, 80, 0.2);
@@ -58,44 +111,107 @@ const isSelected = (item) => {
 
   .top {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 20px;
+    flex-direction: column;
 
-    .img {
-      height: 30px;
+
+    .logo {
+      padding: 24px 20px;
+      height: 48px;
+
     }
-  }
 
-  .center {
-    flex: 1;
-
-    .items {
+    .profile {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
 
-      .item {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        padding: 12px 20px;
-        gap: 10px;
-        color: #484848;
+      .photo {
+        border-radius: 20px;
+        height: 24px;
+        width: 24px;
+        background-color: $color-purple;
+        margin-right: 8px;
 
-        &:hover {
-          cursor: pointer;
-          color: black;
-        }
+      }
 
-        &.selected {
-          color: $color-primary;
-        }
+      .name {
+        color: $black_color;
+        font-size: 14px;
+        font-weight: 400;
+      }
 
-        .icon {
-          font-size: 20px;
-        }
+
+    }
+
+    .grey {
+      padding-top: 24px;
+      color: $grey;
+      opacity: 0.8;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .for_link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 16px;
+      padding-left: 20px;
+      border-left:5px solid $color-primary opacity(0);
+
+      .link {
+
+        color: $black_color;
+
+        font-size: 14px;
+        font-weight: 600;
+
+      }
+
+      .img {
+        width: 24px;
+        height: 24px;
+        padding-right: 15px;
+      }
+      &.selected {
+        border-left:5px solid $color-primary;
       }
     }
+
   }
+
+  //.center {
+  //  flex: 1;
+  //
+  //  .items {
+  //    display: flex;
+  //    flex-direction: column;
+  //
+  //    .item {
+  //      display: flex;
+  //      align-items: center;
+  //      justify-content: start;
+  //      padding: 12px 20px;
+  //      gap: 10px;
+  //      color: #484848;
+  //
+  //      &:hover {
+  //        cursor: pointer;
+  //        color: black;
+  //      }
+  //
+  //      &.selected {
+  //        color: $color-primary;
+  //      }
+  //
+  //      .icon {
+  //        font-size: 20px;
+  //      }
+  //    }
+  //
+  //  }
+
 }
+
+
 </style>
