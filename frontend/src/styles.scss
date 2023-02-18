@@ -51,6 +51,10 @@ $borra: 4px;
   padding: 10px 12px;
   border-radius: $borra;
   font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   &.primary {
     background-color: $color-primary;

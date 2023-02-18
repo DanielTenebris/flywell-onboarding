@@ -53,9 +53,7 @@
           </template>
 
           <template v-if="slide.status === 'wip'">
-<!--            <Icon class="icon" icon="bx:book-reader" />-->
-<!--            <div class="text">В процессе</div>-->
-            <button class="appButton lime btnGo">
+            <button class="appButton lime btnGo" @click="$router.push('/lesson/1')">
               <span class="text">Изучить</span>
               <Icon class="icon" icon="bx:chevron-right" />
             </button>
@@ -232,9 +230,6 @@ const mats = [
     }
 
     .btnGo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
 
       .text {
         padding-left: 6px;

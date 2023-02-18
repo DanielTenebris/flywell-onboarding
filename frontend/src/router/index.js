@@ -5,6 +5,7 @@ import PageMobileHome from "@/features/mobile/home/PageMobileHome.vue";
 import PageDesktopDashboard from "@/features/desktop/home/PageDesktopDashboard.vue";
 import PageMobileRoadmap from "@/features/mobile/roadmap/PageMobileRoadmap.vue";
 import PageMobileLibrary from "@/features/mobile/library/PageMobileLibrary.vue";
+import PageMobileLesson from "@/features/mobile/lesson/PageMobileLesson.vue";
 
 const routes = [
   {
@@ -35,6 +36,13 @@ const routes = [
   {
     path: '/library',
     component: PageMobileLibrary,
+    meta: {
+      layout: LayoutMobile,
+    },
+  },
+  {
+    path: '/lesson/:id',
+    component: PageMobileLesson,
     meta: {
       layout: LayoutMobile,
     },
