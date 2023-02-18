@@ -33,7 +33,7 @@
 
     <div class="actions">
       <div style="flex: 1" />
-      <button class="appButton primary">
+      <button class="appButton primary" @click="$router.push('/quiz/1')">
         <span class="text">Пройти тест</span>
         <Icon class="icon" icon="bx:chevron-right" />
       </button>
