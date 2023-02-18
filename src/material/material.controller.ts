@@ -11,7 +11,7 @@ import { MaterialService } from './material.service';
 import { Material } from './material.schema';
 
 @Controller('material')
-export class MaterialsController {
+export class MaterialController {
   constructor(private readonly materialsService: MaterialService) {}
 
   @Post()
