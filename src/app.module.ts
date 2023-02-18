@@ -7,6 +7,7 @@ import { MinioClientModule } from './minio/minio.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { QuizModule } from './quiz/quiz.module';
 import { UploaderModule } from './uploader/uploader.module';
+import { MaterialModule } from './material/material.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { UploaderModule } from './uploader/uploader.module';
     MinioClientModule,
     QuizModule,
     UploaderModule,
+    MaterialModule,
   ],
 })
 export class AppModule {}
