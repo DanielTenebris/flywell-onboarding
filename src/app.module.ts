@@ -5,6 +5,7 @@ import { MongooseModuleAsyncOptions } from '@nestjs/mongoose';
 import { RoadmapModule } from './roadmap/roadmap.module';
 import { MinioClientModule } from './minio/minio.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TestModule } from './test/test.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     EmployeeModule,
     RoadmapModule,
     MinioClientModule,
+    TestModule,
   ],
 })
 export class AppModule {}

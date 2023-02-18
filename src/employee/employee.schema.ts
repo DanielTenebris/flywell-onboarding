@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { Roadmap, RoadmapSchema } from 'src/roadmap/roadmap.schema';
 
 @Schema()
 export class Employee {
@@ -11,6 +12,12 @@ export class Employee {
 
   @Prop()
   position: string;
+
+  @Prop()
+  mentorContact: string;
+
+  @Prop({ type: [RoadmapSchema] })
+  roadmap: Roadmap
 }
 
 export type EmployeeDocument = Employee & Document;
