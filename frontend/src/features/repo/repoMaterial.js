@@ -1,4 +1,5 @@
 import {faker} from "@faker-js/faker";
+import {getRandomInt} from "@/features/repo/utils.js";
 
 const data = []
 const size = getRandomInt(20);
@@ -14,7 +15,7 @@ for (let i = 0; i < size + 10; i++) {
 
 export const repoMaterial = () => {
   return {
-    getAll: async () => {
+    getAll: () => {
       return data;
     }
   }

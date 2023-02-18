@@ -1,4 +1,5 @@
 import {repoLesson} from "@/features/repo/repoLesson.js";
+import {getRandomInt, shuffle} from "@/features/repo/utils.js";
 
 const data = [];
 
@@ -15,7 +16,7 @@ for (let i = 0; i < 10 + getRandomInt(20); i++) {
 
 export const repoRoadmap = () => {
   return {
-    getAll: async () => {
+    getAll: () => {
       return data;
     }
   }

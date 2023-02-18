@@ -1,9 +1,10 @@
 import {repoTest} from "@/features/repo/repoTest.js";
 import {repoMaterial} from "@/features/repo/repoMaterial.js";
+import {getRandomInt, shuffle} from "@/features/repo/utils.js";
 
 const data = []
 let materials = repoMaterial().getAll();
-let tests = repoTest.getAll();
+let tests = repoTest().getAll();
 
 for (let i = 0; i < 10 + getRandomInt(20); i++) {
   data.push({
@@ -18,7 +19,7 @@ for (let i = 0; i < 10 + getRandomInt(20); i++) {
 
 export const repoLesson = () => {
   return {
-    getAll: async () => {
+    getAll: () => {
       return data;
     }
   }

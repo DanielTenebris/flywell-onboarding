@@ -1,8 +1,8 @@
-function getRandomInt(max) {
+export function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function shuffle(array) {
+export function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
   // While there remain elements to shuffle.

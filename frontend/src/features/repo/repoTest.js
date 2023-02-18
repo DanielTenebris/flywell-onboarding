@@ -1,3 +1,6 @@
+import {getRandomInt} from "@/features/repo/utils.js";
+import {faker} from "@faker-js/faker";
+
 const data = []
 for (let i = 0; i < 10 + getRandomInt(20); i++) {
   data.push({
@@ -13,10 +16,8 @@ for (let i = 0; i < 10 + getRandomInt(20); i++) {
 
 export const repoTest = () => {
   return {
-    getAll: async () => {
-      return [
-
-      ]
+    getAll: () => {
+      return data
     }
   }
 }
