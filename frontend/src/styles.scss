@@ -3,6 +3,8 @@ $color-lime: #DAEF14;
 $color-orange: #FD651A;
 $color-blue: #6CE3FD;
 
+$color-green: #00A6A6;
+
 $color-primary: $color-purple;
 $color-grey: #efefef;
 
@@ -53,5 +55,10 @@ $borra: 4px;
   &.primary {
     background-color: $color-primary;
     color: white;
+  }
+
+  &.lime {
+    background-color: $color-lime;
+    color: black;
   }
 }
