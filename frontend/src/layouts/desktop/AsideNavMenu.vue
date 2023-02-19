@@ -53,7 +53,7 @@
 
       <div :class="{'for_link': true, 'selected': isSelected('#')}" @click="$router.push('/tests')">
         <div class="img">
-          <img :src='require("@/layouts/desktop/note.svg")'/>
+          <img :src='require("@/layouts/desktop/test.svg")'/>
         </div>
         <div class="link">
           Тесты

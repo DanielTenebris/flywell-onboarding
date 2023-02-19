@@ -33,17 +33,17 @@
           <div style="flex:1">
 
           </div>
-          <div class="button">
+          <div class="appButton primary" style="cursor: pointer">
             <div>
               Добавить сотрудника
             </div>
           </div>
 
         </div>
-        <div class="head">
+        <div class="head" style="margin-left: 50px">
           <div style="flex:3">Имя сотрудника</div>
           <div style="flex:1">Отдел</div>
-          <div style="flex:2">Этапов пройдено</div>
+          <div style="flex:2">Роадмап</div>
           <div style="flex:2">Статус</div>
           <div style="flex:1">Социальные сети</div>
         </div>
@@ -51,7 +51,7 @@
         <div class="empls">
           <div class="empl" v-for="empl in employees">
             <div class="icon">
-
+              <img :src="empl.ava" style="height: 100%; border-radius: 10px;" />
             </div>
             <div class="info">
               <div class="name">
@@ -67,6 +67,7 @@
             </div>
 
             <div class="step">
+              <span>{{ empl.roadmap.title }}</span>
               <p>{{ empl.step }}</p>
             </div>
 
@@ -90,38 +91,55 @@
 
 
 <script setup>
-const employees = [
-  {
-    img: '',
-    name: 'Иван Иванов Иванович',
-    position: 'UI/UX designer',
-    department: 'Дизайн',
-    step: '5/30 этап',
-    status: 'В сети',
-  }, {
-    img: '',
-    name: 'Иван Иванов Иванович',
-    position: 'UI/UX designer',
-    department: 'Дизайн',
-    step: '5/30 этап',
-    status: 'В сети',
-  }, {
-    img: '',
-    name: 'Иван Иванов Иванович',
-    position: 'UI/UX designer',
-    department: 'Дизайн',
-    step: '5/30 этап',
-    status: 'В сети',
-  }, {
-    img: '',
-    name: 'Иван Иванов Иванович',
-    position: 'UI/UX designer',
-    department: 'Дизайн',
-    step: '5/30 этап',
-    status: 'В сети',
-  },
+import {repoEmployee} from "@/features/repo/repoEmployee.js";
+import {computed} from "vue";
 
-]
+// const employees = [
+//   {
+//     img: '',
+//     name: 'Иван Иванов Иванович',
+//     position: 'UI/UX designer',
+//     department: 'Дизайн',
+//     step: '5/30 этап',
+//     status: 'В сети',
+//   },
+//   {
+//     img: '',
+//     name: 'Иван Иванов Иванович',
+//     position: 'UI/UX designer',
+//     department: 'Дизайн',
+//     step: '5/30 этап',
+//     status: 'В сети',
+//   },
+//   {
+//     img: '',
+//     name: 'Иван Иванов Иванович',
+//     position: 'UI/UX designer',
+//     department: 'Дизайн',
+//     step: '5/30 этап',
+//     status: 'В сети',
+//   },
+//   {
+//     img: '',
+//     name: 'Иван Иванов Иванович',
+//     position: 'UI/UX designer',
+//     department: 'Дизайн',
+//     step: '5/30 этап',
+//     status: 'В сети',
+//   },
+// ]
+
+const employees = computed(() => {
+  return repoEmployee().getAll().map((e) => {
+    return {
+      ...e,
+      ava: 'https://i.pravatar.cc/150?u=' + e.name,
+      department: (e.name.length % 2 === 0) ? 'Дизайн' : 'Разработка',
+      step: '' + e.name.length + '/' + (e.roadmap.lessons.length * 10),
+      status: (e.name.length % 4 === 0) ? 'Есть проблемы' : 'OK',
+    };
+  });
+});
 </script>
 
 
@@ -227,10 +245,9 @@ const employees = [
         height: 90px;
 
         .icon {
-
           height: 40px;
           width: 40px;
-          background-color: #6CE3FD;
+          margin-right: 10px;
         }
 
         .info {
