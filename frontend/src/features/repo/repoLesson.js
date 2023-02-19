@@ -32,7 +32,7 @@ data.push({
   tests: tests.slice(0, getRandomInt(1)),
 });
 data.push({
-  title: "Очновы JavaScript",
+  title: "Основы JavaScript",
   materials: materials.slice(0, getRandomInt(5)),
   tests: tests.slice(0, getRandomInt(1)),
 });

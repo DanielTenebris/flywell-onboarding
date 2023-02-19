@@ -10,6 +10,7 @@ import PageMobileQuiz from "@/features/mobile/quiz/PageMobileQuiz.vue";
 import PageDesktopEmployees from "@/features/desktop/employees/PageDesktopEmployees";
 import PageAuth from "@/features/auth/PageAuth.vue";
 import PageDesktopRoadmaps from "@/features/desktop/roadmaps/PageDesktopRoadmaps.vue";
+import PageDesktopLessons from "@/features/desktop/lessons/PageDesktopLessons.vue";
 import PageDesktopMaterials from "@/features/desktop/materials/PageDesktopMaterials.vue";
 import PageDesktopNewRoadmap from "@/features/desktop/roadmaps/new/PageDesktopNewRoadmap.vue";
 
@@ -61,7 +62,7 @@ const routes = [
 
   {
     path: '/lessons',
-    component: PageDesktopRoadmaps,
+    component: PageDesktopLessons,
     meta: {
       layout: LayoutDesktop,
     },
