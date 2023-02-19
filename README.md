@@ -1,73 +1,60 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+<h4>Реализованная функциональность</h4>
+TODO
+<ul>
+    <li>Функционал 1;</li>
+    <li>Функционал 2;</li>
+    <li>Функционал 3;</li>
+</ul> 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h4>Особенность проекта в следующем:</h4>
+TODO
+<ul>
+ <li>Киллерфича-1;</li>
+ <li>Киллерфича-2;</li>
+ <li>Киллерфича-3;</li>  
+ </ul>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h4>Основной стек технологий:</h4>
+<ul>
+    <li>Vue, docker, Nest (Node.JS), MongoDB, python</li>
+</ul>
 
-## Description
+<h4>Демо</h4>
+TODO: Ссылка на демо
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+СРЕДА ЗАПУСКА
+------------
+1. На машине можно запускать докер-контейнеры
+2. есть node.js и npm
 
-```bash
-$ npm install
-```
 
-## Running the app
+УСТАНОВКА
+------------
+### Установка пакета name
 
-```bash
-# development
-$ npm run start
+Выполните
+~~~
+В первой консоли:
+docker-compose up
 
-# watch mode
-$ npm run start:dev
+Во второй консоли:
+cd frontend
+npm i
+npm run serve
+~~~
+### База данных
 
-# production mode
-$ npm run start:prod
-```
+Встроена в докер
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
+РАЗРАБОТЧИКИ
+------------
 
-# e2e tests
-$ npm run test:e2e
+<h4>Эдуард "DVegasa" Халтурин, Фулстек </h4>
+<h4>Надежда Трофимова, Фронтенд </h4>
+<h4>Родион Московкин, Бэкенд </h4>
+<h4>Анастасия Дёмина, Дизайнер </h4>
+<h4>Данил Шариков, Бэкенд </h4>
 
-# test coverage
-$ npm run test:cov
-```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
