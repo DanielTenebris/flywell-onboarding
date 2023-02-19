@@ -30,8 +30,8 @@ const roadmaps = repoLesson().getAll();
   }
 
   .roadmaps {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 18px;
   }
 }

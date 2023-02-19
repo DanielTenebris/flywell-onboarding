@@ -18,6 +18,13 @@ const props = defineProps(['lessons']);
 @import "@/styles.scss";
 
 #roadmapInline {
+  display: flex;
+  align-items: center;
+justify-content: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  border: solid 3px $color-primary ;
   .title {
     font-size: 18px;
     font-weight: bold;
