@@ -4,7 +4,7 @@
       Важные материалы
     </h1>
 
-    <button class="appButton primary btnNew" @click="$router.push('/materials/new')">Добавить новый материал</button>
+    <button class="appButton primary btnNew" @click="$router.push('#')">Добавить новый материал</button>
 
     <div class="roadmaps">
       <MaterialInline v-for="r in materials" :material="r" class="roadmap" />

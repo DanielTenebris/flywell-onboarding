@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected('/tests')}" @click="$router.push('/tests')">
+      <div :class="{'for_link': true, 'selected': isSelected('#')}" @click="$router.push('/tests')">
         <div class="img">
           <img :src='require("@/layouts/desktop/note.svg")'/>
         </div>
@@ -60,7 +60,7 @@
         </div>
       </div>
 
-      <div :class="{'for_link': true, 'selected': isSelected('/notifications')}" @click="$router.push('/notifications')">
+      <div :class="{'for_link': true, 'selected': isSelected('#')}" @click="$router.push('/notifications')">
         <div class="img">
           <img :src='require("@/layouts/desktop/messages2.svg")'/>
         </div>
