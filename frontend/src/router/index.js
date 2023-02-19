@@ -10,6 +10,7 @@ import PageMobileQuiz from "@/features/mobile/quiz/PageMobileQuiz.vue";
 import PageDesktopEmployees from "@/features/desktop/employees/PageDesktopEmployees";
 import PageAuth from "@/features/auth/PageAuth.vue";
 import PageDesktopRoadmaps from "@/features/desktop/roadmaps/PageDesktopRoadmaps.vue";
+import PageDesktopMaterials from "@/features/desktop/materials/PageDesktopMaterials.vue";
 import PageDesktopNewRoadmap from "@/features/desktop/roadmaps/new/PageDesktopNewRoadmap.vue";
 
 const routes = [
@@ -75,7 +76,7 @@ const routes = [
 
   {
     path: '/materials',
-    component: PageDesktopRoadmaps,
+    component: PageDesktopMaterials,
     meta: {
       layout: LayoutDesktop,
     },

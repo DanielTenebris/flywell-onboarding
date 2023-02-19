@@ -25,7 +25,7 @@ data.push({
 });
 shuffle(lessons);
 data.push({
-  title: "устройство дизайна в нашей компании",
+  title: "Устройство дизайна в нашей компании",
   lessons: lessons.slice(0, getRandomInt(5)),
 });
 
